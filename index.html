@@ -810,10 +810,17 @@
                                             <input type="text" id="settings-kepsek-name" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
                                         </div>
                                     </div>
-                                    <div>
-                                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">URL Logo Sekolah (Mendukung File Gambar Online)</label>
-                                        <input type="url" id="settings-logo-url" placeholder="Masukkan URL gambar logo" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
-                                        <p class="text-[10px] text-slate-400 mt-1">*Kosongkan jika ingin memakai ikon default topi wisuda.</p>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">URL Logo Sekolah (Mendukung File Gambar Online)</label>
+                                            <input type="url" id="settings-logo-url" placeholder="Masukkan URL gambar logo" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                            <p class="text-[10px] text-slate-400 mt-1">*Kosongkan jika ingin memakai ikon default topi wisuda.</p>
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">URL Foto Kepala Sekolah (Mendukung File Gambar Online)</label>
+                                            <input type="url" id="settings-kepsek-img" placeholder="Masukkan URL foto Kepala Sekolah" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                            <p class="text-[10px] text-slate-400 mt-1">*Kosongkan jika ingin memakai foto bawaan.</p>
+                                        </div>
                                     </div>
                                     <div>
                                         <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Sambutan Kepala Sekolah</label>
@@ -1008,6 +1015,7 @@
             kepalaSekolah: "Sri Wahyuni, S.Pd., M.Pd.",
             sambutanKepsek: "Selamat datang di portal resmi SDN Sidomulyo II. Kami berkomitmen untuk mendidik siswa dengan kasih sayang, membentuk karakter luhur, dan mendorong prestasi setinggi langit.",
             logoUrl: "", // Default empty to use elegant standard icon
+            kepsekImg: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80", // Default headmaster photo
             password: "admin123", // Default login admin password
             siswaCount: "324",
             guruCount: "18",
@@ -1143,6 +1151,7 @@
             // Headmaster Info
             document.getElementById('kepsek-name-text').innerText = premiumSettings.kepalaSekolah;
             document.getElementById('kepsek-welcome-text').innerText = premiumSettings.sambutanKepsek;
+            document.getElementById('kepsek-photo').src = premiumSettings.kepsekImg || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80";
 
             // Logo Renderer (Dynamic image or fallback default icon)
             const logoNavbarImg = document.getElementById('school-logo-navbar');
@@ -1361,15 +1370,16 @@
             showAlert("Sesi admin berhasil diakhiri.");
         }
 
+        // Ganti Tab Kontrol Dasbor Admin
         function switchAdminTab(panelName) {
-            // Hide all panels
+            // Sembunyikan semua panel
             document.querySelectorAll('.admin-panel').forEach(p => p.classList.add('hidden'));
-            // Remove active classes
+            // Buang class aktif
             document.querySelectorAll('.admin-tab-btn').forEach(b => {
                 b.className = "admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200";
             });
 
-            // Show current
+            // Tampilkan panel aktif
             document.getElementById(`panel-${panelName}`).classList.remove('hidden');
             
             if(panelName === 'premium') {
@@ -1385,6 +1395,7 @@
             document.getElementById('settings-school-name').value = premiumSettings.schoolName;
             document.getElementById('settings-kepsek-name').value = premiumSettings.kepalaSekolah;
             document.getElementById('settings-logo-url').value = premiumSettings.logoUrl || "";
+            document.getElementById('settings-kepsek-img').value = premiumSettings.kepsekImg || "";
             document.getElementById('settings-kepsek-welcome').value = premiumSettings.sambutanKepsek;
 
             // Section 3
@@ -1413,10 +1424,11 @@
             premiumSettings.schoolName = document.getElementById('settings-school-name').value;
             premiumSettings.kepalaSekolah = document.getElementById('settings-kepsek-name').value;
             premiumSettings.logoUrl = document.getElementById('settings-logo-url').value;
+            premiumSettings.kepsekImg = document.getElementById('settings-kepsek-img').value;
             premiumSettings.sambutanKepsek = document.getElementById('settings-kepsek-welcome').value;
             
             saveState();
-            showAlert("Identitas Pimpinan & Logo Berhasil Disimpan!");
+            showAlert("Identitas Pimpinan, Foto & Logo Berhasil Disimpan!");
         }
 
         function savePremiumPassword(e) {
@@ -1590,6 +1602,7 @@
             e.target.reset();
         }
 
+        // Tambah galeri kegiatan baru
         function adminAddGallery(e) {
             e.preventDefault();
             const title = document.getElementById('add-gal-title').value;
