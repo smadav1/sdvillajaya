@@ -59,11 +59,12 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo & School Name -->
                 <a href="#beranda" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    <div class="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform overflow-hidden">
+                        <img id="school-logo-navbar" src="" alt="Logo" class="w-full h-full object-cover hidden">
+                        <i id="school-logo-icon-navbar" class="fa-solid fa-graduation-cap text-2xl"></i>
                     </div>
                     <div>
-                        <span class="block font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">SDN SIDOMULYO II</span>
+                        <span class="block font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors school-title-text">SDN SIDOMULYO II</span>
                         <span class="block text-xs text-slate-500 font-medium tracking-wide uppercase">Cerdas • Berkarakter • Berbudaya</span>
                     </div>
                 </a>
@@ -158,8 +159,8 @@
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
             <div class="max-w-3xl">
                 <!-- Badge -->
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-6 animate-pulse">
-                    <i class="fa-solid fa-star text-amber-400"></i> Akreditasi A Unggul
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-6">
+                    <i class="fa-solid fa-star text-amber-400"></i> Akreditasi <span class="badge-akreditasi-text">A</span> Unggul
                 </div>
                 <!-- Headline -->
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
@@ -200,11 +201,11 @@
                     <div class="relative group">
                         <div class="absolute -inset-2 rounded-2xl bg-gradient-primary opacity-20 group-hover:opacity-30 blur transition-all"></div>
                         <div class="relative bg-white p-4 rounded-2xl shadow-xl">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Kepala Sekolah" class="w-full h-80 object-cover rounded-xl mb-4" onerror="this.src='https://placehold.co/600x800/059669/ffffff?text=Kepala+Sekolah'">
+                            <img id="kepsek-photo" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Kepala Sekolah" class="w-full h-80 object-cover rounded-xl mb-4" onerror="this.src='https://placehold.co/600x800/059669/ffffff?text=Kepala+Sekolah'">
                             <div class="text-center">
-                                <h3 class="text-xl font-bold text-slate-900">Sri Wahyuni, S.Pd., M.Pd.</h3>
+                                <h3 id="kepsek-name-text" class="text-xl font-bold text-slate-900">Sri Wahyuni, S.Pd., M.Pd.</h3>
                                 <p class="text-sm font-medium text-emerald-600">Kepala Sekolah SDN Sidomulyo II</p>
-                                <div class="mt-4 pt-4 border-t border-slate-100 italic text-slate-500 text-sm">
+                                <div id="kepsek-welcome-text" class="mt-4 pt-4 border-t border-slate-100 italic text-slate-500 text-sm">
                                     "Selamat datang di portal resmi SDN Sidomulyo II. Kami berkomitmen untuk mendidik siswa dengan kasih sayang, membentuk karakter luhur, dan mendorong prestasi setinggi langit."
                                 </div>
                             </div>
@@ -227,7 +228,7 @@
                         <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center gap-3">
                             <i class="fa-solid fa-award text-2xl text-emerald-600"></i>
                             <div>
-                                <span class="block font-bold text-slate-900">Terakreditasi A</span>
+                                <span class="block font-bold text-slate-900">Terakreditasi <span class="badge-akreditasi-text">A</span></span>
                                 <span class="block text-xs text-slate-500">Kualitas Mutu Unggulan</span>
                             </div>
                         </div>
@@ -251,7 +252,7 @@
                             <i class="fa-solid fa-eye text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-slate-950 mb-4">Visi Kami</h3>
-                        <p class="text-slate-700 text-lg leading-relaxed italic">
+                        <p id="visi-display-text" class="text-slate-700 text-lg leading-relaxed italic">
                             "Terwujudnya insan pendidikan yang beriman dan bertakwa kepada Tuhan Yang Maha Esa, unggul dalam mutu prestasi akademik maupun non-akademik, berbudaya luhur, serta memiliki kepedulian tinggi terhadap kelestarian lingkungan hidup."
                         </p>
                     </div>
@@ -267,19 +268,8 @@
                             <i class="fa-solid fa-bullseye text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-slate-950 mb-4">Misi Kami</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3 text-slate-700">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mt-0.5">1</span>
-                                <span>Menanamkan keyakinan beragama yang kuat melalui bimbingan kerohanian serta kegiatan ibadah secara rutin di sekolah.</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-slate-700">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mt-0.5">2</span>
-                                <span>Menyelenggarakan pembelajaran yang aktif, kreatif, dan inovatif guna melejitkan kompetensi akademik seluruh siswa.</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-slate-700">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mt-0.5">3</span>
-                                <span>Membina minat, bakat, dan kreativitas siswa melalui pengembangan ekstrakurikuler terpadu.</span>
-                            </li>
+                        <ul id="misi-display-list" class="space-y-4">
+                            <!-- Populated dynamically -->
                         </ul>
                     </div>
                     <div class="mt-8 pt-6 border-t border-sky-100 text-xs text-sky-700 font-semibold tracking-wide uppercase">
@@ -307,7 +297,7 @@
                     <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                         <i class="fa-solid fa-users text-xl"></i>
                     </div>
-                    <span class="block text-3xl sm:text-4xl font-extrabold text-slate-950">324</span>
+                    <span id="stat-siswa-text" class="block text-3xl sm:text-4xl font-extrabold text-slate-950">324</span>
                     <span class="block text-slate-500 text-sm font-medium mt-1">Siswa Aktif</span>
                 </div>
                 <!-- Card 2 -->
@@ -315,7 +305,7 @@
                     <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto mb-4">
                         <i class="fa-solid fa-chalkboard-user text-xl"></i>
                     </div>
-                    <span class="block text-3xl sm:text-4xl font-extrabold text-slate-950">18</span>
+                    <span id="stat-guru-text" class="block text-3xl sm:text-4xl font-extrabold text-slate-950">18</span>
                     <span class="block text-slate-500 text-sm font-medium mt-1">Guru & Tenaga Didik</span>
                 </div>
                 <!-- Card 3 -->
@@ -323,7 +313,7 @@
                     <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mx-auto mb-4">
                         <i class="fa-solid fa-building text-xl"></i>
                     </div>
-                    <span class="block text-3xl sm:text-4xl font-extrabold text-slate-950">12</span>
+                    <span id="stat-rombel-text" class="block text-3xl sm:text-4xl font-extrabold text-slate-950">12</span>
                     <span class="block text-slate-500 text-sm font-medium mt-1">Rombongan Belajar</span>
                 </div>
                 <!-- Card 4 -->
@@ -331,7 +321,7 @@
                     <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mx-auto mb-4">
                         <i class="fa-solid fa-star text-xl"></i>
                     </div>
-                    <span class="block text-3xl sm:text-4xl font-extrabold text-slate-950">A</span>
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-slate-950 badge-akreditasi-text">A</span>
                     <span class="block text-slate-500 text-sm font-medium mt-1">Akreditasi Unggul</span>
                 </div>
             </div>
@@ -346,7 +336,7 @@
                     <div class="divide-y divide-slate-100">
                         <div class="py-3 flex justify-between items-center text-sm">
                             <span class="text-slate-500 font-medium">NPSN</span>
-                            <span class="text-slate-900 font-bold">20330054 (Contoh)</span>
+                            <span id="display-npsn" class="text-slate-900 font-bold">20330054 (Contoh)</span>
                         </div>
                         <div class="py-3 flex justify-between items-center text-sm">
                             <span class="text-slate-500 font-medium">Status</span>
@@ -358,15 +348,15 @@
                         </div>
                         <div class="py-3 flex justify-between items-center text-sm">
                             <span class="text-slate-500 font-medium">Kecamatan</span>
-                            <span class="text-slate-900 font-bold">Sidomulyo</span>
+                            <span id="display-kecamatan" class="text-slate-900 font-bold">Sidomulyo</span>
                         </div>
                         <div class="py-3 flex justify-between items-center text-sm">
                             <span class="text-slate-500 font-medium">Kabupaten / Kota</span>
-                            <span class="text-slate-900 font-bold">Kabupaten Demak</span>
+                            <span id="display-kabupaten" class="text-slate-900 font-bold">Kabupaten Demak</span>
                         </div>
                         <div class="py-3 flex justify-between items-center text-sm">
                             <span class="text-slate-500 font-medium">Provinsi</span>
-                            <span class="text-slate-900 font-bold">Jawa Tengah</span>
+                            <span id="display-provinsi" class="text-slate-900 font-bold">Jawa Tengah</span>
                         </div>
                     </div>
                 </div>
@@ -501,7 +491,7 @@
                 <div class="lg:col-span-5 space-y-8 flex flex-col justify-between">
                     <div>
                         <span class="text-sm font-bold tracking-widest text-emerald-600 uppercase">Hubungi Kami</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Akses Mudah Menuju SDN Sidomulyo II</h2>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4 school-title-text">Akses Mudah Menuju SDN Sidomulyo II</h2>
                         <p class="text-slate-600 leading-relaxed">
                             Kami sangat menyambut baik kritik, saran, pertanyaan maupun pendaftaran siswa baru. Silakan hubungi kami melalui saluran berikut:
                         </p>
@@ -515,7 +505,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Alamat Sekolah</h4>
-                                <p class="text-slate-600 text-sm mt-0.5">Jl. Raya Sidomulyo, Kec. Sidomulyo, Kabupaten Demak, Jawa Tengah 59511</p>
+                                <p id="kontak-alamat-text" class="text-slate-600 text-sm mt-0.5">Jl. Raya Sidomulyo, Kec. Sidomulyo, Kabupaten Demak, Jawa Tengah 59511</p>
                             </div>
                         </div>
                         <!-- Item 2 -->
@@ -525,7 +515,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Telepon & WhatsApp</h4>
-                                <p class="text-slate-600 text-sm mt-0.5">WhatsApp Admin: 0812-3456-7890</p>
+                                <p id="kontak-phone-text" class="text-slate-600 text-sm mt-0.5">WhatsApp Admin: 0812-3456-7890</p>
                             </div>
                         </div>
                         <!-- Item 3 -->
@@ -535,15 +525,14 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Surel Resmi</h4>
-                                <p class="text-slate-600 text-sm mt-0.5">info@sdnsidomulyo2.sch.id</p>
+                                <p id="kontak-email-text" class="text-slate-600 text-sm mt-0.5">info@sdnsidomulyo2.sch.id</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Embed Google Maps Placeholder -->
+                    <!-- Embed Google Maps -->
                     <div class="rounded-2xl overflow-hidden shadow-md border border-slate-100 h-64 relative group">
-                        <!-- Simulated Interactive Map or Real Embed Map -->
-                        <iframe class="w-full h-full border-0 filter grayscale" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.896792348367!2d110.51860644342416!3d-6.8936993136208575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f209581c8b3d%3A0xe54dfcf800c14c50!2sSidomulyo%2C%20Demak%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe id="kontak-maps-frame" class="w-full h-full border-0 filter grayscale" src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
@@ -589,10 +578,11 @@
                 <!-- Branding Col -->
                 <div class="lg:col-span-4 space-y-4">
                     <div class="flex items-center space-x-3 text-white">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
-                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        <div class="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center overflow-hidden">
+                            <img id="school-logo-footer" src="" alt="Logo" class="w-full h-full object-cover hidden">
+                            <i id="school-logo-icon-footer" class="fa-solid fa-graduation-cap text-xl"></i>
                         </div>
-                        <span class="font-extrabold text-lg tracking-tight">SDN SIDOMULYO II</span>
+                        <span class="font-extrabold text-lg tracking-tight school-title-text">SDN SIDOMULYO II</span>
                     </div>
                     <p class="text-sm leading-relaxed">
                         Membangun insan akademis yang berakhlak mulia, cerdas berpikir, serta berwawasan teknologi modern dan berakar kuat pada nilai luhur budaya bangsa.
@@ -649,14 +639,14 @@
                         <i class="fa-solid fa-shield-halved"></i> Login Admin
                     </button>
                     <span>|</span>
-                    <span>Kabupaten Demak</span>
+                    <span id="display-kabupaten-footer">Kabupaten Demak</span>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- WHATSAPP FLOATING BUTTON -->
-    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20SDN%20Sidomulyo%20II%2C%20saya%20ingin%20bertanya%20seputar..." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl shadow-emerald-600/30 hover:scale-110 transition-all duration-300">
+    <a id="wa-floating-btn" href="" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl shadow-emerald-600/30 hover:scale-110 transition-all duration-300">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
@@ -667,7 +657,7 @@
             <i class="fa-solid fa-check"></i>
         </div>
         <div>
-            <h5 class="font-bold text-slate-900 text-sm">Sukses</h5>
+            <h5 class="font-bold text-slate-900 text-sm">Notifikasi</h5>
             <p id="alert-message" class="text-slate-500 text-xs mt-0.5">Aksi berhasil dilakukan!</p>
         </div>
     </div>
@@ -699,7 +689,7 @@
                 <div class="bg-gradient-primary text-white p-6 flex justify-between items-center">
                     <div>
                         <h3 class="text-xl font-extrabold">Portal Management Admin</h3>
-                        <p class="text-xs text-white/80">Kelola Guru, Galeri, Berita, & Prestasi (Local Engine)</p>
+                        <p class="text-xs text-white/80">Kelola Guru, Galeri, Berita, & Fitur Premium</p>
                     </div>
                     <button onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all">
                         <i class="fa-solid fa-xmark"></i>
@@ -712,19 +702,23 @@
                     <h4 class="text-lg font-bold text-slate-900 text-center">Masuk ke Portal Manajemen</h4>
                     <p class="text-slate-500 text-sm text-center max-w-md">Masukkan kata sandi administrator untuk mengaktifkan mode pengeditan konten sekolah.</p>
                     <div class="w-full max-w-xs space-y-2">
-                        <input type="password" id="admin-pwd" placeholder="Kata sandi (Bawaan: admin123)" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-center font-bold">
+                        <input type="password" id="admin-pwd" placeholder="Kata sandi" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-center font-bold">
                         <button onclick="verifyAdmin()" class="w-full py-3 rounded-xl font-bold text-white bg-gradient-primary hover:opacity-95 transition-all shadow-md">Masuk Sekarang</button>
+                        <p class="text-[10px] text-slate-400 text-center mt-1">Sandi bawaan: <strong>admin123</strong> (atau kosongkan jika belum diganti)</p>
                     </div>
                 </div>
 
                 <!-- Admin Dashboard Screen (Hidden on startup) -->
-                <div id="admin-dashboard" class="hidden p-6 sm:p-8 flex flex-col h-[70vh] overflow-y-auto">
+                <div id="admin-dashboard" class="hidden p-6 sm:p-8 flex flex-col h-[75vh] overflow-y-auto bg-slate-50">
                     <!-- Control Tabs -->
-                    <div class="flex flex-wrap gap-2 border-b border-slate-100 pb-4 mb-6">
+                    <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-4 mb-6">
                         <button onclick="switchAdminTab('berita')" id="tab-btn-berita" class="admin-tab-btn active px-4 py-2 text-sm font-bold rounded-xl bg-emerald-600 text-white">Kelola Berita</button>
                         <button onclick="switchAdminTab('galeri')" id="tab-btn-galeri" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200">Kelola Galeri</button>
                         <button onclick="switchAdminTab('guru')" id="tab-btn-guru" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200">Kelola Guru</button>
                         <button onclick="switchAdminTab('prestasi')" id="tab-btn-prestasi" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200">Kelola Prestasi</button>
+                        <button onclick="switchAdminTab('premium')" id="tab-btn-premium" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-amber-100 text-amber-800 hover:bg-amber-200 flex items-center gap-1.5">
+                            <i class="fa-solid fa-crown text-amber-500"></i> Fitur Premium & Setting
+                        </button>
                     </div>
 
                     <!-- Panel forms and item lists -->
@@ -732,27 +726,27 @@
                         <!-- Panel Berita -->
                         <div id="panel-berita" class="admin-panel">
                             <h4 class="font-bold text-slate-900 mb-4">Tambahkan Berita Kegiatan</h4>
-                            <form onsubmit="adminAddNews(event)" class="space-y-4 mb-6 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <form onsubmit="adminAddNews(event)" class="space-y-4 mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <input type="text" id="add-news-title" required placeholder="Judul Berita" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <input type="text" id="add-news-img" required placeholder="URL Foto Utama" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
+                                    <input type="text" id="add-news-title" required placeholder="Judul Berita" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <input type="text" id="add-news-img" required placeholder="URL Foto Utama" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
                                 </div>
-                                <textarea id="add-news-content" required rows="3" placeholder="Isi materi berita selengkapnya..." class="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 resize-none"></textarea>
+                                <textarea id="add-news-content" required rows="3" placeholder="Isi materi berita selengkapnya..." class="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 resize-none bg-slate-50"></textarea>
                                 <div class="flex justify-end">
                                     <button type="submit" class="px-6 py-2 rounded-xl bg-emerald-600 text-white text-sm font-bold hover:bg-emerald-700">Publikasikan Berita</button>
                                 </div>
                             </form>
-                            <div class="divide-y divide-slate-100" id="admin-news-list"></div>
+                            <div class="divide-y divide-slate-100 bg-white p-4 rounded-xl shadow-sm border border-slate-200" id="admin-news-list"></div>
                         </div>
 
                         <!-- Panel Galeri -->
                         <div id="panel-galeri" class="admin-panel hidden">
                             <h4 class="font-bold text-slate-900 mb-4">Tambahkan Foto Galeri</h4>
-                            <form onsubmit="adminAddGallery(event)" class="space-y-4 mb-6 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <form onsubmit="adminAddGallery(event)" class="space-y-4 mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                    <input type="text" id="add-gal-title" required placeholder="Judul Foto" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <input type="text" id="add-gal-img" required placeholder="URL Gambar" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <select id="add-gal-cat" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
+                                    <input type="text" id="add-gal-title" required placeholder="Judul Foto" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <input type="text" id="add-gal-img" required placeholder="URL Gambar" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <select id="add-gal-cat" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
                                         <option value="belajar">Belajar</option>
                                         <option value="upacara">Upacara</option>
                                         <option value="pramuka">Pramuka</option>
@@ -763,42 +757,217 @@
                                     <button type="submit" class="px-6 py-2 rounded-xl bg-emerald-600 text-white text-sm font-bold hover:bg-emerald-700">Tambahkan Galeri</button>
                                 </div>
                             </form>
-                            <div class="divide-y divide-slate-100" id="admin-gallery-list"></div>
+                            <div class="divide-y divide-slate-100 bg-white p-4 rounded-xl shadow-sm border border-slate-200" id="admin-gallery-list"></div>
                         </div>
 
                         <!-- Panel Guru -->
                         <div id="panel-guru" class="admin-panel hidden">
                             <h4 class="font-bold text-slate-900 mb-4">Tambahkan Data Guru / GTK</h4>
-                            <form onsubmit="adminAddTeacher(event)" class="space-y-4 mb-6 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <form onsubmit="adminAddTeacher(event)" class="space-y-4 mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                    <input type="text" id="add-teacher-name" required placeholder="Nama Lengkap" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <input type="text" id="add-teacher-role" required placeholder="Jabatan (e.g. Guru Kelas V)" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <input type="text" id="add-teacher-subject" required placeholder="Spesialisasi/Mapel" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <input type="text" id="add-teacher-img" required placeholder="URL Foto Pendidik" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
+                                    <input type="text" id="add-teacher-name" required placeholder="Nama Lengkap & Gelar" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <input type="text" id="add-teacher-role" required placeholder="Jabatan (e.g. Guru Kelas V)" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <input type="text" id="add-teacher-subject" required placeholder="Spesialisasi/Mapel" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <input type="text" id="add-teacher-img" required placeholder="URL Foto Pendidik" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
                                 </div>
                                 <div class="flex justify-end">
                                     <button type="submit" class="px-6 py-2 rounded-xl bg-emerald-600 text-white text-sm font-bold hover:bg-emerald-700">Tambahkan Guru</button>
                                 </div>
                             </form>
-                            <div class="divide-y divide-slate-100" id="admin-teachers-list"></div>
+                            <div class="divide-y divide-slate-100 bg-white p-4 rounded-xl shadow-sm border border-slate-200" id="admin-teachers-list"></div>
                         </div>
 
                         <!-- Panel Prestasi -->
                         <div id="panel-prestasi" class="admin-panel hidden">
                             <h4 class="font-bold text-slate-900 mb-4">Tambahkan Prestasi</h4>
-                            <form onsubmit="adminAddAchievement(event)" class="space-y-4 mb-6 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <form onsubmit="adminAddAchievement(event)" class="space-y-4 mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                    <input type="text" id="add-ach-title" required placeholder="Judul Prestasi (e.g. Juara 1 Adiwiyata)" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <input type="text" id="add-ach-by" required placeholder="Penerima Penghargaan" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
-                                    <input type="text" id="add-ach-level" required placeholder="Tingkat/Kategori" class="px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500">
+                                    <input type="text" id="add-ach-title" required placeholder="Judul Prestasi" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <input type="text" id="add-ach-by" required placeholder="Penerima Penghargaan" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    <input type="text" id="add-ach-level" required placeholder="Tingkat/Kategori" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
                                 </div>
                                 <div class="flex justify-end">
                                     <button type="submit" class="px-6 py-2 rounded-xl bg-emerald-600 text-white text-sm font-bold hover:bg-emerald-700">Tambahkan Prestasi</button>
                                 </div>
                             </form>
-                            <div class="divide-y divide-slate-100" id="admin-achievements-list"></div>
+                            <div class="divide-y divide-slate-100 bg-white p-4 rounded-xl shadow-sm border border-slate-200" id="admin-achievements-list"></div>
+                        </div>
+
+                        <!-- Panel PREMIUM SETTING -->
+                        <div id="panel-premium" class="admin-panel hidden space-y-6">
+                            
+                            <!-- 1. Identitas, Logo & Kepala Sekolah -->
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-extrabold text-slate-900 text-base mb-4 flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-emerald-600"></i> Logo & Pimpinan Sekolah</h4>
+                                <form onsubmit="savePremiumProfile(event)" class="space-y-4">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Nama Instansi Sekolah</label>
+                                            <input type="text" id="settings-school-name" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Nama Kepala Sekolah</label>
+                                            <input type="text" id="settings-kepsek-name" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">URL Logo Sekolah (Mendukung File Gambar Online)</label>
+                                        <input type="url" id="settings-logo-url" placeholder="Masukkan URL gambar logo" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        <p class="text-[10px] text-slate-400 mt-1">*Kosongkan jika ingin memakai ikon default topi wisuda.</p>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Sambutan Kepala Sekolah</label>
+                                        <textarea id="settings-kepsek-welcome" rows="3" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50 resize-none"></textarea>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button type="submit" class="px-5 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700">Simpan Identitas</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- 2. Ganti Password Portal -->
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-extrabold text-slate-900 text-base mb-4 flex items-center gap-2"><i class="fa-solid fa-key text-amber-500"></i> Keamanan: Ganti Password Admin</h4>
+                                <form onsubmit="savePremiumPassword(event)" class="space-y-4">
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Sandi Saat Ini</label>
+                                            <input type="password" id="settings-old-password" required placeholder="Sandi lama" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Sandi Baru</label>
+                                            <input type="password" id="settings-new-password" required placeholder="Sandi baru" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Konfirmasi Sandi Baru</label>
+                                            <input type="password" id="settings-confirm-password" required placeholder="Ulangi sandi baru" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button type="submit" class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold">Perbarui Password</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- 3. Edit Statistika & Identitas Lokasi -->
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-extrabold text-slate-900 text-base mb-4 flex items-center gap-2"><i class="fa-solid fa-chart-simple text-sky-600"></i> Counter Statistika & Identitas Daerah</h4>
+                                <form onsubmit="savePremiumStats(event)" class="space-y-4">
+                                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Siswa Aktif</label>
+                                            <input type="text" id="settings-siswa-count" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Pendidik & GTK</label>
+                                            <input type="text" id="settings-guru-count" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Rombongan Belajar</label>
+                                            <input type="text" id="settings-rombel-count" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Akreditasi</label>
+                                            <input type="text" id="settings-akreditasi" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">NPSN Resmi</label>
+                                            <input type="text" id="settings-npsn" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Kecamatan</label>
+                                            <input type="text" id="settings-kecamatan" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Kabupaten / Kota</label>
+                                            <input type="text" id="settings-kabupaten" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Provinsi</label>
+                                            <input type="text" id="settings-provinsi" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button type="submit" class="px-5 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700">Perbarui Data</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- 4. Edit Visi Misi & Hubungi Kami -->
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-extrabold text-slate-900 text-base mb-4 flex items-center gap-2"><i class="fa-solid fa-bullseye text-purple-600"></i> Pengaturan Visi, Misi & Kontak Resmi</h4>
+                                <form onsubmit="savePremiumVisiMisiKontak(event)" class="space-y-4">
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Pernyataan Visi Sekolah</label>
+                                        <textarea id="settings-visi" rows="2" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50 resize-none"></textarea>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Misi Ke-1</label>
+                                            <input type="text" id="settings-misi-1" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Misi Ke-2</label>
+                                            <input type="text" id="settings-misi-2" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Misi Ke-3</label>
+                                            <input type="text" id="settings-misi-3" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-slate-100 pt-4">
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">No. WhatsApp Admin (Gunakan Format Internasional)</label>
+                                            <input type="text" id="settings-phone" required placeholder="Contoh: 6281234567890" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Surel / Email Sekolah</label>
+                                            <input type="email" id="settings-email" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Link Peta Embed Google Maps</label>
+                                            <input type="text" id="settings-maps-url" required placeholder="https://www.google.com/maps/embed..." class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Alamat Lengkap</label>
+                                        <input type="text" id="settings-alamat" required class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-emerald-500 bg-slate-50">
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button type="submit" class="px-5 py-2 rounded-xl bg-purple-600 text-white text-xs font-bold hover:bg-purple-700">Perbarui Visi, Misi & Kontak</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- 5. Backup & Restore (Cadangkan & Pulihkan) -->
+                            <div class="bg-amber-50 p-5 rounded-2xl border border-amber-200/60 shadow-sm">
+                                <h4 class="font-extrabold text-amber-950 text-base mb-2 flex items-center gap-2"><i class="fa-solid fa-database"></i> Backup & Restore Database Instansi</h4>
+                                <p class="text-amber-900 text-xs mb-4">Cadangkan semua data guru, artikel berita, prestasi, galeri kegiatan, serta identitas portal ini menjadi file cadangan resmi yang aman.</p>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button onclick="exportDatabase()" class="px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                                        <i class="fa-solid fa-download"></i> Ekspor / Unduh Cadangan JSON
+                                    </button>
+                                    <label class="px-5 py-3 rounded-xl bg-white border border-amber-300 text-amber-800 font-bold text-xs flex items-center justify-center gap-2 cursor-pointer hover:bg-amber-100/50 transition-all">
+                                        <i class="fa-solid fa-upload"></i> Impor / Pulihkan Database
+                                        <input type="file" id="import-file-input" onchange="importDatabase(event)" class="hidden" accept=".json">
+                                    </label>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+                </div>
+
+                <!-- Modal Footer (Logout button) -->
+                <div id="admin-modal-footer" class="hidden p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center text-xs">
+                    <span class="text-emerald-700 font-bold flex items-center gap-1">
+                        <span class="h-2 w-2 rounded-full bg-emerald-500"></span> Mode Admin Aktif
+                    </span>
+                    <button onclick="logoutAdmin()" class="bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold px-4 py-2 rounded-xl transition">
+                        Keluar Sesi Admin
+                    </button>
                 </div>
             </div>
         </div>
@@ -833,11 +1002,39 @@
             { id: 3, title: "Juara Terbaik Penghargaan Adiwiyata Utama", by: "Segenap Guru & Siswa SDN Sidomulyo II", level: "Nasional" }
         ];
 
+        // PREMIUM DEFAULT CONFIGURATION DATA
+        const defaultPremiumSettings = {
+            schoolName: "SD NEGERI SIDOMULYO II",
+            kepalaSekolah: "Sri Wahyuni, S.Pd., M.Pd.",
+            sambutanKepsek: "Selamat datang di portal resmi SDN Sidomulyo II. Kami berkomitmen untuk mendidik siswa dengan kasih sayang, membentuk karakter luhur, dan mendorong prestasi setinggi langit.",
+            logoUrl: "", // Default empty to use elegant standard icon
+            password: "admin123", // Default login admin password
+            siswaCount: "324",
+            guruCount: "18",
+            rombelCount: "12",
+            akreditasi: "A",
+            npsn: "20330054",
+            kecamatan: "Sidomulyo",
+            kabupaten: "Kabupaten Demak",
+            provinsi: "Jawa Tengah",
+            visi: "Terwujudnya insan pendidikan yang beriman dan bertakwa kepada Tuhan Yang Maha Esa, unggul dalam mutu prestasi akademik maupun non-akademik, berbudaya luhur, serta memiliki kepedulian tinggi terhadap kelestarian lingkungan hidup.",
+            misi: [
+                "Menanamkan keyakinan beragama yang kuat melalui bimbingan kerohanian serta kegiatan ibadah secara rutin di sekolah.",
+                "Menyelenggarakan pembelajaran yang aktif, kreatif, dan inovatif guna melejitkan kompetensi akademik seluruh siswa.",
+                "Membina minat, bakat, dan kreativitas siswa melalui pengembangan ekstrakurikuler terpadu."
+            ],
+            phone: "6281234567890",
+            email: "info@sdnsidomulyo2.sch.id",
+            mapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.896792348367!2d110.51860644342416!3d-6.8936993136208575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f209581c8b3d%3A0xe54dfcf800c14c50!2sSidomulyo%2C%20Demak%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid",
+            alamat: "Jl. Raya Sidomulyo, Kec. Sidomulyo, Kabupaten Demak, Jawa Tengah 59511"
+        };
+
         // LOAD FROM LOCAL STORAGE OR INITIALIZE
         let news = JSON.parse(localStorage.getItem('sdn_news')) || initialNews;
         let gallery = JSON.parse(localStorage.getItem('sdn_gallery')) || initialGallery;
         let teachers = JSON.parse(localStorage.getItem('sdn_teachers')) || initialTeachers;
         let achievements = JSON.parse(localStorage.getItem('sdn_achievements')) || initialAchievements;
+        let premiumSettings = JSON.parse(localStorage.getItem('sdn_premium_settings')) || defaultPremiumSettings;
 
         // SAVE STATE HELPER
         function saveState() {
@@ -845,6 +1042,7 @@
             localStorage.setItem('sdn_gallery', JSON.stringify(gallery));
             localStorage.setItem('sdn_teachers', JSON.stringify(teachers));
             localStorage.setItem('sdn_achievements', JSON.stringify(achievements));
+            localStorage.setItem('sdn_premium_settings', JSON.stringify(premiumSettings));
             renderAll();
         }
 
@@ -927,11 +1125,91 @@
 
         // --- RENDERING DYNAMIC ELEMENTS ---
         function renderAll() {
+            renderPremiumStructure();
             renderTeachers();
             renderGallery('semua');
             renderNews();
             renderAchievements();
             renderAdminLists();
+        }
+
+        // Apply Premium Settings to Website Layout
+        function renderPremiumStructure() {
+            // Title Text
+            document.querySelectorAll('.school-title-text').forEach(el => {
+                el.innerText = premiumSettings.schoolName || "SDN SIDOMULYO II";
+            });
+
+            // Headmaster Info
+            document.getElementById('kepsek-name-text').innerText = premiumSettings.kepalaSekolah;
+            document.getElementById('kepsek-welcome-text').innerText = premiumSettings.sambutanKepsek;
+
+            // Logo Renderer (Dynamic image or fallback default icon)
+            const logoNavbarImg = document.getElementById('school-logo-navbar');
+            const logoNavbarIcon = document.getElementById('school-logo-icon-navbar');
+            const logoFooterImg = document.getElementById('school-logo-footer');
+            const logoFooterIcon = document.getElementById('school-logo-icon-footer');
+
+            if (premiumSettings.logoUrl && premiumSettings.logoUrl.trim() !== "") {
+                logoNavbarImg.src = premiumSettings.logoUrl;
+                logoNavbarImg.classList.remove('hidden');
+                logoNavbarIcon.classList.add('hidden');
+
+                logoFooterImg.src = premiumSettings.logoUrl;
+                logoFooterImg.classList.remove('hidden');
+                logoFooterIcon.classList.add('hidden');
+            } else {
+                logoNavbarImg.classList.add('hidden');
+                logoNavbarIcon.classList.remove('hidden');
+
+                logoFooterImg.classList.add('hidden');
+                logoFooterIcon.classList.remove('hidden');
+            }
+
+            // Badges
+            document.querySelectorAll('.badge-akreditasi-text').forEach(el => {
+                el.innerText = premiumSettings.akreditasi;
+            });
+
+            // Stats
+            document.getElementById('stat-siswa-text').innerText = premiumSettings.siswaCount;
+            document.getElementById('stat-guru-text').innerText = premiumSettings.guruCount;
+            document.getElementById('stat-rombel-text').innerText = premiumSettings.rombelCount;
+
+            // Identity
+            document.getElementById('display-npsn').innerText = premiumSettings.npsn;
+            document.getElementById('display-kecamatan').innerText = premiumSettings.kecamatan;
+            document.getElementById('display-kabupaten').innerText = premiumSettings.kabupaten;
+            document.getElementById('display-provinsi').innerText = premiumSettings.provinsi;
+            document.getElementById('display-kabupaten-footer').innerText = premiumSettings.kabupaten;
+
+            // Visi Misi
+            document.getElementById('visi-display-text').innerText = premiumSettings.visi;
+            const misiContainer = document.getElementById('misi-display-list');
+            misiContainer.innerHTML = premiumSettings.misi.map((m, idx) => `
+                <li class="flex items-start gap-3 text-slate-700">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mt-0.5">${idx + 1}</span>
+                    <span>${m}</span>
+                </li>
+            `).join('');
+
+            // Kontak
+            document.getElementById('kontak-alamat-text').innerText = premiumSettings.alamat;
+            document.getElementById('kontak-phone-text').innerText = "WhatsApp Admin: " + formatWhatsAppDisplay(premiumSettings.phone);
+            document.getElementById('kontak-email-text').innerText = premiumSettings.email;
+            document.getElementById('kontak-maps-frame').src = premiumSettings.mapsUrl;
+
+            // Floating WA button link
+            document.getElementById('wa-floating-btn').href = "https://wa.me/" + premiumSettings.phone.replace(/[^0-9]/g, "") + "?text=Halo%20Admin%20" + encodeURIComponent(premiumSettings.schoolName) + "%2C%20saya%20ingin%20bertanya...";
+        }
+
+        function formatWhatsAppDisplay(phone) {
+            // Simple clean visual formatter
+            let clean = phone.replace(/[^0-9]/g, "");
+            if(clean.startsWith("62")) {
+                return "0" + clean.slice(2);
+            }
+            return phone;
         }
 
         // Render Teachers
@@ -1045,9 +1323,11 @@
             if (isAdminLoggedIn) {
                 document.getElementById('admin-gate').classList.add('hidden');
                 document.getElementById('admin-dashboard').classList.remove('hidden');
+                document.getElementById('admin-modal-footer').classList.remove('hidden');
             } else {
                 document.getElementById('admin-gate').classList.remove('hidden');
                 document.getElementById('admin-dashboard').classList.add('hidden');
+                document.getElementById('admin-modal-footer').classList.add('hidden');
             }
         }
 
@@ -1057,15 +1337,28 @@
 
         function verifyAdmin() {
             const pwd = document.getElementById('admin-pwd').value;
-            if (pwd === "admin123" || pwd === "") {
+            const targetPassword = premiumSettings.password || "admin123";
+
+            if (pwd === targetPassword || (pwd === "" && targetPassword === "admin123")) {
                 isAdminLoggedIn = true;
                 document.getElementById('admin-gate').classList.add('hidden');
                 document.getElementById('admin-dashboard').classList.remove('hidden');
+                document.getElementById('admin-modal-footer').classList.remove('hidden');
                 showAlert("Sukses masuk sebagai Administrator!");
+                loadPremiumFormValues();
                 renderAdminLists();
             } else {
-                showAlert("Kata sandi salah! Coba 'admin123' atau kosongkan.");
+                showAlert("Sandi Salah! Silakan coba lagi.");
             }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            document.getElementById('admin-pwd').value = '';
+            document.getElementById('admin-gate').classList.remove('hidden');
+            document.getElementById('admin-dashboard').classList.add('hidden');
+            document.getElementById('admin-modal-footer').classList.add('hidden');
+            showAlert("Sesi admin berhasil diakhiri.");
         }
 
         function switchAdminTab(panelName) {
@@ -1078,7 +1371,156 @@
 
             // Show current
             document.getElementById(`panel-${panelName}`).classList.remove('hidden');
-            document.getElementById(`tab-btn-${panelName}`).className = "admin-tab-btn active px-4 py-2 text-sm font-bold rounded-xl bg-emerald-600 text-white";
+            
+            if(panelName === 'premium') {
+                document.getElementById(`tab-btn-${panelName}`).className = "admin-tab-btn active px-4 py-2 text-sm font-bold rounded-xl bg-amber-500 text-white flex items-center gap-1.5";
+            } else {
+                document.getElementById(`tab-btn-${panelName}`).className = "admin-tab-btn active px-4 py-2 text-sm font-bold rounded-xl bg-emerald-600 text-white";
+            }
+        }
+
+        // --- PREMIUM SYSTEM OPERATIONS ---
+        function loadPremiumFormValues() {
+            // Section 1
+            document.getElementById('settings-school-name').value = premiumSettings.schoolName;
+            document.getElementById('settings-kepsek-name').value = premiumSettings.kepalaSekolah;
+            document.getElementById('settings-logo-url').value = premiumSettings.logoUrl || "";
+            document.getElementById('settings-kepsek-welcome').value = premiumSettings.sambutanKepsek;
+
+            // Section 3
+            document.getElementById('settings-siswa-count').value = premiumSettings.siswaCount;
+            document.getElementById('settings-guru-count').value = premiumSettings.guruCount;
+            document.getElementById('settings-rombel-count').value = premiumSettings.rombelCount;
+            document.getElementById('settings-akreditasi').value = premiumSettings.akreditasi;
+            document.getElementById('settings-npsn').value = premiumSettings.npsn;
+            document.getElementById('settings-kecamatan').value = premiumSettings.kecamatan;
+            document.getElementById('settings-kabupaten').value = premiumSettings.kabupaten;
+            document.getElementById('settings-provinsi').value = premiumSettings.provinsi;
+
+            // Section 4
+            document.getElementById('settings-visi').value = premiumSettings.visi;
+            document.getElementById('settings-misi-1').value = premiumSettings.misi[0] || "";
+            document.getElementById('settings-misi-2').value = premiumSettings.misi[1] || "";
+            document.getElementById('settings-misi-3').value = premiumSettings.misi[2] || "";
+            document.getElementById('settings-phone').value = premiumSettings.phone;
+            document.getElementById('settings-email').value = premiumSettings.email;
+            document.getElementById('settings-maps-url').value = premiumSettings.mapsUrl;
+            document.getElementById('settings-alamat').value = premiumSettings.alamat;
+        }
+
+        function savePremiumProfile(e) {
+            e.preventDefault();
+            premiumSettings.schoolName = document.getElementById('settings-school-name').value;
+            premiumSettings.kepalaSekolah = document.getElementById('settings-kepsek-name').value;
+            premiumSettings.logoUrl = document.getElementById('settings-logo-url').value;
+            premiumSettings.sambutanKepsek = document.getElementById('settings-kepsek-welcome').value;
+            
+            saveState();
+            showAlert("Identitas Pimpinan & Logo Berhasil Disimpan!");
+        }
+
+        function savePremiumPassword(e) {
+            e.preventDefault();
+            const oldPass = document.getElementById('settings-old-password').value;
+            const newPass = document.getElementById('settings-new-password').value;
+            const confirmPass = document.getElementById('settings-confirm-password').value;
+
+            const currentActualPassword = premiumSettings.password || "admin123";
+
+            if (oldPass !== currentActualPassword) {
+                showAlert("Password lama tidak sesuai!");
+                return;
+            }
+
+            if (newPass !== confirmPass) {
+                showAlert("Konfirmasi password baru tidak cocok!");
+                return;
+            }
+
+            premiumSettings.password = newPass;
+            saveState();
+            showAlert("Kata Sandi Portal Berhasil Diperbarui!");
+            e.target.reset();
+        }
+
+        function savePremiumStats(e) {
+            e.preventDefault();
+            premiumSettings.siswaCount = document.getElementById('settings-siswa-count').value;
+            premiumSettings.guruCount = document.getElementById('settings-guru-count').value;
+            premiumSettings.rombelCount = document.getElementById('settings-rombel-count').value;
+            premiumSettings.akreditasi = document.getElementById('settings-akreditasi').value;
+            premiumSettings.npsn = document.getElementById('settings-npsn').value;
+            premiumSettings.kecamatan = document.getElementById('settings-kecamatan').value;
+            premiumSettings.kabupaten = document.getElementById('settings-kabupaten').value;
+            premiumSettings.provinsi = document.getElementById('settings-provinsi').value;
+
+            saveState();
+            showAlert("Statistika & Identitas wilayah sukses diperbarui!");
+        }
+
+        function savePremiumVisiMisiKontak(e) {
+            e.preventDefault();
+            premiumSettings.visi = document.getElementById('settings-visi').value;
+            premiumSettings.misi = [
+                document.getElementById('settings-misi-1').value,
+                document.getElementById('settings-misi-2').value,
+                document.getElementById('settings-misi-3').value
+            ];
+            premiumSettings.phone = document.getElementById('settings-phone').value;
+            premiumSettings.email = document.getElementById('settings-email').value;
+            premiumSettings.mapsUrl = document.getElementById('settings-maps-url').value;
+            premiumSettings.alamat = document.getElementById('settings-alamat').value;
+
+            saveState();
+            showAlert("Visi, Misi, dan kontak sekolah sukses diperbarui!");
+        }
+
+        // EKSPOR & IMPOR DATABASE (BACKUP RESTORE)
+        function exportDatabase() {
+            const backupData = {
+                news: news,
+                gallery: gallery,
+                teachers: teachers,
+                achievements: achievements,
+                premiumSettings: premiumSettings
+            };
+
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `Backup_Website_SDN_Sidomulyo2_${Date.now()}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+            showAlert("Database Cadangan Berhasil Diunduh!");
+        }
+
+        function importDatabase(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const parsedData = JSON.parse(e.target.result);
+                    if (parsedData.news && parsedData.gallery && parsedData.teachers && parsedData.premiumSettings) {
+                        news = parsedData.news;
+                        gallery = parsedData.gallery;
+                        teachers = parsedData.teachers;
+                        achievements = parsedData.achievements || [];
+                        premiumSettings = parsedData.premiumSettings;
+
+                        saveState();
+                        loadPremiumFormValues();
+                        showAlert("Sukses! Semua data dipulihkan ke versi cadangan.");
+                    } else {
+                        showAlert("Format file JSON cadangan tidak valid!");
+                    }
+                } catch (err) {
+                    showAlert("Gagal membaca file JSON!");
+                }
+            };
+            reader.readAsText(file);
         }
 
         // ADMIN CRUD - RENDER MANAGEMENTS ITEMS
@@ -1086,9 +1528,9 @@
             // News list
             const newsList = document.getElementById('admin-news-list');
             newsList.innerHTML = news.map(n => `
-                <div class="py-3 flex items-center justify-between text-sm">
-                    <span class="truncate max-w-xs font-medium text-slate-800">${n.title}</span>
-                    <button onclick="deleteNews(${n.id})" class="text-red-500 hover:text-red-700 text-xs font-bold flex items-center gap-1">
+                <div class="py-3.5 flex items-center justify-between text-sm">
+                    <span class="truncate max-w-xs font-semibold text-slate-800">${n.title}</span>
+                    <button onclick="deleteNews(${n.id})" class="text-rose-600 hover:text-rose-800 text-xs font-bold flex items-center gap-1">
                         <i class="fa-solid fa-trash"></i> Hapus
                     </button>
                 </div>
@@ -1097,9 +1539,9 @@
             // Gallery list
             const galList = document.getElementById('admin-gallery-list');
             galList.innerHTML = gallery.map(g => `
-                <div class="py-3 flex items-center justify-between text-sm">
-                    <span class="truncate max-w-xs font-medium text-slate-800">${g.title} (${g.category})</span>
-                    <button onclick="deleteGallery(${g.id})" class="text-red-500 hover:text-red-700 text-xs font-bold flex items-center gap-1">
+                <div class="py-3.5 flex items-center justify-between text-sm">
+                    <span class="truncate max-w-xs font-semibold text-slate-800">${g.title} (${g.category})</span>
+                    <button onclick="deleteGallery(${g.id})" class="text-rose-600 hover:text-rose-800 text-xs font-bold flex items-center gap-1">
                         <i class="fa-solid fa-trash"></i> Hapus
                     </button>
                 </div>
@@ -1108,9 +1550,9 @@
             // Teachers list
             const teachList = document.getElementById('admin-teachers-list');
             teachList.innerHTML = teachers.map(t => `
-                <div class="py-3 flex items-center justify-between text-sm">
-                    <span class="truncate max-w-xs font-medium text-slate-800">${t.name} - ${t.role}</span>
-                    <button onclick="deleteTeacher(${t.id})" class="text-red-500 hover:text-red-700 text-xs font-bold flex items-center gap-1">
+                <div class="py-3.5 flex items-center justify-between text-sm">
+                    <span class="truncate max-w-xs font-semibold text-slate-800">${t.name} - ${t.role}</span>
+                    <button onclick="deleteTeacher(${t.id})" class="text-rose-600 hover:text-rose-800 text-xs font-bold flex items-center gap-1">
                         <i class="fa-solid fa-trash"></i> Hapus
                     </button>
                 </div>
@@ -1119,9 +1561,9 @@
             // Achievements list
             const achList = document.getElementById('admin-achievements-list');
             achList.innerHTML = achievements.map(a => `
-                <div class="py-3 flex items-center justify-between text-sm">
-                    <span class="truncate max-w-xs font-medium text-slate-800">${a.title} (${a.by})</span>
-                    <button onclick="deleteAchievement(${a.id})" class="text-red-500 hover:text-red-700 text-xs font-bold flex items-center gap-1">
+                <div class="py-3.5 flex items-center justify-between text-sm">
+                    <span class="truncate max-w-xs font-semibold text-slate-800">${a.title} (${a.by})</span>
+                    <button onclick="deleteAchievement(${a.id})" class="text-rose-600 hover:text-rose-800 text-xs font-bold flex items-center gap-1">
                         <i class="fa-solid fa-trash"></i> Hapus
                     </button>
                 </div>
