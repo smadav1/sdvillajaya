@@ -980,6 +980,25 @@
         </div>
     </div>
 
+    <!-- FIREBASE ONLINE DATABASE CONNECTION -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBNzC50PgLV2jYehk9TA9wxmDLAin2QiQQ",
+            authDomain: "website-sd-villa.firebaseapp.com",
+            projectId: "website-sd-villa",
+            storageBucket: "website-sd-villa.firebasestorage.app",
+            messagingSenderId: "944056319080",
+            appId: "1:944056319080:web:c7530bf6ab1cf0c13d8fdd"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const SITE_DOC_REF = db.collection("website_sekolah").doc("main_content");
+        console.log("🔥 Firebase Connected Successfully");
+    </script>
+
     <!-- JAVASCRIPT LOGIC ENGINE -->
     <script>
         // MOCK INITIAL DATA OR STORAGE FETCH
@@ -1044,13 +1063,63 @@
         let achievements = JSON.parse(localStorage.getItem('sdn_achievements')) || initialAchievements;
         let premiumSettings = JSON.parse(localStorage.getItem('sdn_premium_settings')) || defaultPremiumSettings;
 
-        // SAVE STATE HELPER
-        function saveState() {
+        // SAVE STATE HELPER: simpan ke browser + Firebase Firestore online
+        async function saveState() {
+            // Backup lokal agar website tetap jalan meskipun internet putus
             localStorage.setItem('sdn_news', JSON.stringify(news));
             localStorage.setItem('sdn_gallery', JSON.stringify(gallery));
             localStorage.setItem('sdn_teachers', JSON.stringify(teachers));
             localStorage.setItem('sdn_achievements', JSON.stringify(achievements));
             localStorage.setItem('sdn_premium_settings', JSON.stringify(premiumSettings));
+
+            renderAll();
+
+            // Simpan online ke Firebase
+            try {
+                await SITE_DOC_REF.set({
+                    news,
+                    gallery,
+                    teachers,
+                    achievements,
+                    premiumSettings,
+                    updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                console.log("✅ Data website tersimpan ke Firebase");
+            } catch (error) {
+                console.error("❌ Gagal menyimpan ke Firebase:", error);
+                showAlert("Data tersimpan lokal, tetapi gagal sinkron Firebase. Cek internet / rules Firestore.");
+            }
+        }
+
+        // LOAD STATE ONLINE: ambil data dari Firebase saat website dibuka
+        async function loadStateFromFirebase() {
+            try {
+                const doc = await SITE_DOC_REF.get();
+                if (doc.exists) {
+                    const data = doc.data();
+                    news = data.news || news;
+                    gallery = data.gallery || gallery;
+                    teachers = data.teachers || teachers;
+                    achievements = data.achievements || achievements;
+                    premiumSettings = data.premiumSettings || premiumSettings;
+
+                    // Simpan juga ke localStorage sebagai cadangan offline
+                    localStorage.setItem('sdn_news', JSON.stringify(news));
+                    localStorage.setItem('sdn_gallery', JSON.stringify(gallery));
+                    localStorage.setItem('sdn_teachers', JSON.stringify(teachers));
+                    localStorage.setItem('sdn_achievements', JSON.stringify(achievements));
+                    localStorage.setItem('sdn_premium_settings', JSON.stringify(premiumSettings));
+
+                    console.log("✅ Data website berhasil dimuat dari Firebase");
+                } else {
+                    // Pertama kali pakai: unggah data bawaan ke Firebase
+                    await saveState();
+                    console.log("✅ Data awal berhasil dibuat di Firebase");
+                }
+            } catch (error) {
+                console.error("❌ Gagal memuat data Firebase:", error);
+                showAlert("Gagal memuat Firebase. Website memakai data lokal sementara.");
+            }
             renderAll();
         }
 
@@ -1668,7 +1737,9 @@
         // ON STARTUP LOAD ALL CONTENT
         window.onload = function() {
             renderAll();
+            loadStateFromFirebase();
         }
     </script>
+
 </body>
 </html>
