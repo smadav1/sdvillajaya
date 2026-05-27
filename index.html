@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SD NEGERI SIDOMULYO II - Sekolah Dasar Berkarakter & Berprestasi</title>
+    <meta name="description" content="Website resmi SD Negeri Sidomulyo II: profil sekolah, guru, galeri kegiatan, berita, prestasi, kontak, dan layanan PPDB online.">
+    <meta name="keywords" content="SD Negeri Sidomulyo II, SDN Sidomulyo II, sekolah dasar, PPDB, sekolah berkarakter, sekolah berprestasi">
+    <meta name="author" content="SD Negeri Sidomulyo II">
+    <meta name="theme-color" content="#059669">
+    <meta property="og:title" content="SD NEGERI SIDOMULYO II">
+    <meta property="og:description" content="Sekolah Dasar Berkarakter, Berprestasi, dan Berbudaya.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/059669/ffffff?text=SDN+SIDOMULYO+II">
+    <link rel="manifest" href="data:application/manifest+json,{&quot;name&quot;:&quot;SDN Sidomulyo II&quot;,&quot;short_name&quot;:&quot;SDN Sidomulyo II&quot;,&quot;start_url&quot;:&quot;.&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;background_color&quot;:&quot;#f8fafc&quot;,&quot;theme_color&quot;:&quot;#059669&quot;}">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Google Font -->
@@ -25,6 +34,94 @@
         .bg-gradient-soft {
             background: linear-gradient(135deg, #f0fdf4, #e0f2fe);
         }
+
+        /* SUPER PREMIUM UPGRADE */
+        .premium-glass { background: rgba(255,255,255,.78); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.55); }
+        .premium-card { border-radius: 1.5rem; box-shadow: 0 24px 70px rgba(15, 23, 42, .08); transition: transform .3s ease, box-shadow .3s ease; }
+        .premium-card:hover { transform: translateY(-6px); box-shadow: 0 30px 80px rgba(15, 23, 42, .13); }
+        .hero-premium-glow { position:absolute; width:420px; height:420px; border-radius:999px; background:radial-gradient(circle, rgba(16,185,129,.35), transparent 62%); filter:blur(18px); right:4%; top:12%; z-index:1; pointer-events:none; }
+        .slide img { object-fit: cover !important; padding: 0 !important; }
+        .reveal-up { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+        .reveal-up.show { opacity: 1; transform: translateY(0); }
+        #premium-preloader { transition: opacity .45s ease, visibility .45s ease; }
+        #premium-preloader.hide { opacity:0; visibility:hidden; }
+        .dark-premium { background:#020617 !important; color:#e2e8f0 !important; }
+        .dark-premium header { background:rgba(2,6,23,.94) !important; border-color:#1e293b !important; }
+        .dark-premium section:not(#beranda):not(#ppdb), .dark-premium footer { background:#020617 !important; color:#e2e8f0 !important; }
+        .dark-premium .bg-white, .dark-premium .premium-glass { background-color:#0f172a !important; color:#e2e8f0 !important; border-color:#1e293b !important; }
+        .dark-premium .bg-slate-50, .dark-premium .bg-slate-100 { background-color:#111827 !important; color:#e2e8f0 !important; }
+        .dark-premium .text-slate-900, .dark-premium .text-slate-950, .dark-premium .text-slate-800, .dark-premium .text-slate-700 { color:#f8fafc !important; }
+        .dark-premium .text-slate-600, .dark-premium .text-slate-500, .dark-premium .text-slate-400 { color:#cbd5e1 !important; }
+        .dark-premium .border-slate-100, .dark-premium .border-slate-200, .dark-premium .border-slate-300 { border-color:#1e293b !important; }
+        .dark-premium input, .dark-premium textarea, .dark-premium select { background:#020617 !important; color:#f8fafc !important; border-color:#334155 !important; }
+        .dark-premium input::placeholder, .dark-premium textarea::placeholder { color:#94a3b8 !important; }
+        .dark-premium .shadow-sm, .dark-premium .shadow-md, .dark-premium .shadow-xl, .dark-premium .shadow-2xl { box-shadow: 0 18px 60px rgba(0,0,0,.35) !important; }
+        .theme-toggle-active { background:#0f172a !important; color:#facc15 !important; border-color:#334155 !important; }
+
+        /* FIX DARK MODE READABILITY: kartu gradient/pastel jangan tetap putih saat dark mode */
+        .dark-premium .bg-gradient-soft,
+        .dark-premium [class*="from-emerald-50"],
+        .dark-premium [class*="from-sky-50"],
+        .dark-premium [class*="to-white"] {
+            background-image: none !important;
+            background-color: #0f172a !important;
+            color: #e2e8f0 !important;
+            border-color: #1e293b !important;
+        }
+        .dark-premium .bg-emerald-50,
+        .dark-premium .bg-sky-50,
+        .dark-premium .bg-amber-50,
+        .dark-premium .bg-purple-50 {
+            background-color: #111827 !important;
+            border-color: #1e293b !important;
+        }
+        .dark-premium .text-emerald-700,
+        .dark-premium .text-emerald-600 { color:#34d399 !important; }
+        .dark-premium .text-sky-700,
+        .dark-premium .text-sky-600 { color:#38bdf8 !important; }
+        .dark-premium .text-amber-700,
+        .dark-premium .text-amber-600 { color:#fbbf24 !important; }
+        .dark-premium .text-purple-700,
+        .dark-premium .text-purple-600 { color:#c084fc !important; }
+        .dark-premium .divide-slate-100 > :not([hidden]) ~ :not([hidden]) { border-color:#1e293b !important; }
+        .dark-premium #visi-display-text,
+        .dark-premium #misi-display-list,
+        .dark-premium #misi-display-list li,
+        .dark-premium #kepsek-welcome-text { color:#e2e8f0 !important; }
+
+        /* FIX MOBILE NEWS BUTTON & FLOATING ACTIONS */
+        .news-card-fixed { min-height: 520px; height: auto !important; overflow: visible !important; }
+        .news-readmore-wrap { padding-bottom: 1.75rem !important; margin-top: auto; }
+        .floating-action-btn { width: 3.5rem; height: 3.5rem; right: 1.5rem; z-index: 40; }
+        @media (max-width: 640px) {
+            .news-card-fixed { min-height: 560px; }
+            .news-readmore-wrap { padding-bottom: 2.25rem !important; }
+        }
+        .dark-premium .floating-dark-btn { background:#0f172a !important; color:#facc15 !important; border-color:#334155 !important; }
+        @keyframes premiumPulse { 0%,100%{transform:scale(1);opacity:.9} 50%{transform:scale(1.08);opacity:1} }
+        .premium-pulse { animation: premiumPulse 1.7s ease-in-out infinite; }
+
+
+        /* RAPID HEADER + HERO FIX */
+        header .school-title-text { white-space: nowrap; line-height: 1.12; }
+        header a[href="#beranda"] { flex-shrink: 0; }
+        header nav a { white-space: nowrap; }
+        @media (min-width: 1024px) {
+            header .h-20 { height: 5.5rem; }
+            header a[href="#beranda"] { min-width: 300px; max-width: 380px; }
+            header a[href="#beranda"] .school-title-text { font-size: 1.05rem; }
+            header a[href="#beranda"] span:last-child { font-size: .72rem; letter-spacing: .06em; }
+            header nav { gap: .1rem; }
+            header nav a { padding-left: .65rem !important; padding-right: .65rem !important; }
+            header .hidden.lg\:flex.items-center.space-x-3 { gap: .55rem !important; }
+            header .hidden.lg\:flex.items-center.space-x-3 > * { flex-shrink: 0; }
+        }
+        @media (max-width: 420px) {
+            header .school-title-text { font-size: 1.05rem !important; }
+            header a[href="#beranda"] span:last-child { font-size: .68rem; }
+        }
+        .news-readmore-link { display:inline-flex; align-items:center; gap:.35rem; margin-top:1rem; padding-bottom:.25rem; position:relative; z-index:2; }
+        #news-grid article, #news-grid .news-card { overflow: visible !important; }
     </style>
     <script>
         tailwind.config = {
@@ -53,6 +150,18 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
+    <!-- SUPER PREMIUM PRELOADER -->
+    <div id="premium-preloader" class="fixed inset-0 z-[9999] bg-slate-950 flex items-center justify-center text-white">
+        <div class="text-center">
+            <div class="w-20 h-20 mx-auto rounded-3xl bg-gradient-primary flex items-center justify-center premium-pulse shadow-2xl shadow-emerald-500/30 mb-5">
+                <i class="fa-solid fa-school text-3xl"></i>
+            </div>
+            <h2 class="font-extrabold text-xl tracking-tight">SDN SIDOMULYO II</h2>
+            <p class="text-slate-400 text-sm mt-1">Memuat portal sekolah super premium...</p>
+        </div>
+    </div>
+
+
     <!-- STICKY NAVBAR -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,11 +187,15 @@
                     <a href="#galeri" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all">Galeri</a>
                     <a href="#berita" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all">Berita</a>
                     <a href="#prestasi" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all">Prestasi</a>
+                    <a href="#ppdb" class="px-4 py-2 rounded-lg text-sm font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-all">PPDB</a>
                     <a href="#kontak" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all">Kontak</a>
                 </nav>
 
                 <!-- Admin & Mobile Action Button -->
                 <div class="hidden lg:flex items-center space-x-3">
+                    <button id="dark-mode-toggle" onclick="toggleDarkPremium()" title="Ganti mode terang/gelap" class="px-3 py-2 rounded-lg text-sm font-bold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 transition-all flex items-center gap-2 shadow-sm">
+                        <i id="dark-mode-icon" class="fa-solid fa-moon text-sm"></i> Mode
+                    </button>
                     <button onclick="openAdminModal()" class="px-4 py-2 rounded-lg text-sm font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-all flex items-center gap-2 shadow-sm">
                         <i class="fa-solid fa-lock text-xs"></i> Portal Admin
                     </button>
@@ -107,7 +220,11 @@
             <a href="#galeri" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all">Galeri</a>
             <a href="#berita" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all">Berita</a>
             <a href="#prestasi" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all">Prestasi</a>
+            <a href="#ppdb" class="block px-4 py-3 rounded-xl text-base font-semibold text-emerald-700 bg-emerald-50 hover:text-emerald-800 transition-all">PPDB Online</a>
             <a href="#kontak" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all">Kontak</a>
+            <button id="dark-mode-toggle-mobile" onclick="toggleDarkPremium()" class="w-full text-left px-4 py-3 rounded-xl text-base font-bold text-slate-700 bg-slate-50 border border-slate-200 transition-all flex items-center gap-3">
+                <i id="dark-mode-icon-mobile" class="fa-solid fa-moon"></i> Dark Mode
+            </button>
             <div class="pt-4 pb-2 border-t border-slate-100 flex flex-col gap-2">
                 <button onclick="openAdminModal()" class="w-full text-center py-3 rounded-xl text-base font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 transition-all flex items-center justify-center gap-2">
                     <i class="fa-solid fa-lock text-sm"></i> Portal Admin
@@ -121,6 +238,7 @@
 
     <!-- HERO SECTION WITH SLIDER -->
     <section id="beranda" class="relative overflow-hidden bg-slate-900 text-white min-h-[85vh] flex items-center">
+        <div class="hero-premium-glow"></div>
         <!-- Background Slider Images -->
         <div id="hero-slider" class="absolute inset-0 z-0">
             <!-- Slide 1 -->
@@ -183,6 +301,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- SECTION PROFIL SEKOLAH -->
     <section id="profil" class="py-24 bg-white scroll-mt-20">
@@ -483,6 +602,41 @@
         </div>
     </section>
 
+
+    <!-- SECTION PPDB ONLINE SUPER PREMIUM -->
+    <section id="ppdb" class="py-24 bg-slate-950 text-white scroll-mt-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,#10b981,transparent_35%),radial-gradient(circle_at_bottom_left,#0284c7,transparent_35%)]"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-sm font-bold tracking-widest text-emerald-300 uppercase">Layanan Digital</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold mt-3 leading-tight">PPDB Online Lebih Mudah & Cepat</h2>
+                    <p class="text-slate-300 mt-5 leading-relaxed">Calon wali murid dapat mengisi formulir awal langsung dari website. Data pendaftar akan masuk ke dashboard admin dan bisa direkap.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><i class="fa-solid fa-file-signature text-emerald-300"></i><div class="font-bold mt-2">Form Digital</div><p class="text-xs text-slate-400 mt-1">Tanpa kertas awal</p></div>
+                        <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><i class="fa-solid fa-download text-sky-300"></i><div class="font-bold mt-2">Rekap Admin</div><p class="text-xs text-slate-400 mt-1">Tersimpan otomatis</p></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 bg-white text-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                    <h3 class="text-2xl font-extrabold mb-2">Formulir Minat PPDB</h3>
+                    <p class="text-sm text-slate-500 mb-6">Isi data awal calon siswa. Admin sekolah dapat menghubungi kembali melalui WhatsApp.</p>
+                    <form id="ppdb-form" onsubmit="handlePPDBSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input id="ppdb-nama" required class="px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:outline-none focus:border-emerald-500" placeholder="Nama calon siswa">
+                            <input id="ppdb-ortu" required class="px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:outline-none focus:border-emerald-500" placeholder="Nama orang tua/wali">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input id="ppdb-wa" required class="px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:outline-none focus:border-emerald-500" placeholder="Nomor WhatsApp">
+                            <select id="ppdb-kelas" class="px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:outline-none focus:border-emerald-500"><option>Kelas 1</option><option>Pindahan Kelas 2</option><option>Pindahan Kelas 3</option><option>Pindahan Kelas 4</option><option>Pindahan Kelas 5</option><option>Pindahan Kelas 6</option></select>
+                        </div>
+                        <textarea id="ppdb-alamat" required rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:outline-none focus:border-emerald-500 resize-none" placeholder="Alamat lengkap"></textarea>
+                        <button class="w-full py-4 rounded-xl bg-gradient-primary text-white font-extrabold shadow-lg shadow-emerald-500/20"><i class="fa-solid fa-paper-plane mr-2"></i>Kirim Pendaftaran Awal</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION KONTAK -->
     <section id="kontak" class="py-24 bg-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -645,6 +799,23 @@
         </div>
     </footer>
 
+
+    <!-- DARK MODE FLOATING ACTION -->
+    <button id="dark-mode-floating" onclick="toggleDarkPremium()" title="Dark Mode" class="floating-dark-btn fixed bottom-40 right-6 z-40 w-14 h-14 bg-slate-900 hover:bg-slate-800 text-yellow-300 border border-slate-700 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110">
+        <i id="dark-mode-icon-floating" class="fa-solid fa-moon text-xl"></i>
+    </button>
+
+    <!-- PPDB FLOATING ACTION -->
+    <a href="#ppdb" title="PPDB Online" class="fixed bottom-24 right-6 z-40 w-14 h-14 bg-sky-500 hover:bg-sky-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all">
+        <i class="fa-solid fa-file-pen text-xl"></i>
+    </a>
+
+    <!-- REALTIME VISITOR MINI BADGE -->
+    <div id="visitor-mini-badge" class="fixed left-4 bottom-6 z-40 hidden sm:flex items-center gap-2 px-3 py-2 rounded-full bg-white/90 backdrop-blur border border-slate-200 shadow-lg text-xs font-bold text-slate-700">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 premium-pulse"></span>
+        Online: <span id="public-online-count">0</span>
+    </div>
+
     <!-- WHATSAPP FLOATING BUTTON -->
     <a id="wa-floating-btn" href="" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl shadow-emerald-600/30 hover:scale-110 transition-all duration-300">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
@@ -667,7 +838,7 @@
         <div class="flex items-center justify-center min-h-screen px-4 py-6 text-center">
             <div class="fixed inset-0 bg-slate-950/50 backdrop-blur-sm" onclick="closeNewsModal()"></div>
             <div class="inline-block bg-white rounded-3xl overflow-hidden shadow-2xl transform transition-all max-w-2xl w-full text-left relative z-10 animate-fade-in">
-                <img id="modal-news-img" src="" alt="News banner" class="w-full h-64 object-contain bg-slate-100 p-2" onerror="this.src='https://placehold.co/800x400/059669/ffffff?text=Berita+Sekolah'">
+                <div class="bg-slate-900 overflow-hidden"><img id="modal-news-img" src="" alt="News banner" class="w-full h-72 object-cover" onerror="this.src='https://placehold.co/800x400/059669/ffffff?text=Berita+Sekolah'"></div>
                 <div class="p-8">
                     <span id="modal-news-date" class="text-xs font-bold text-emerald-600"></span>
                     <h3 id="modal-news-title" class="text-2xl font-extrabold text-slate-950 mt-2 mb-4"></h3>
@@ -704,18 +875,31 @@
                     <div class="w-full max-w-xs space-y-2">
                         <input type="password" id="admin-pwd" placeholder="Kata sandi" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-center font-bold">
                         <button onclick="verifyAdmin()" class="w-full py-3 rounded-xl font-bold text-white bg-gradient-primary hover:opacity-95 transition-all shadow-md">Masuk Sekarang</button>
-                        <p class="text-[10px] text-slate-400 text-center mt-1">Sandi bawaan: <strong>admin123</strong> (atau kosongkan jika belum diganti)</p>
+                        <p class="text-[10px] text-slate-400 text-center mt-1">Sandi bawaan: <strong>admin123</strong>. Data tersambung ke Firebase Firestore</p>
                     </div>
                 </div>
 
                 <!-- Admin Dashboard Screen (Hidden on startup) -->
                 <div id="admin-dashboard" class="hidden p-6 sm:p-8 flex flex-col h-[75vh] overflow-y-auto bg-slate-50">
+
+                    <!-- SUPER PREMIUM ADMIN OVERVIEW -->
+                    <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 mb-6">
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><div class="text-xs text-slate-500 font-bold uppercase">Total Pengunjung</div><div id="admin-visitor-count" class="text-2xl font-extrabold text-slate-950">0</div></div>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><div class="text-xs text-slate-500 font-bold uppercase">Online Saat Ini</div><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 premium-pulse"></span><div id="admin-online-count" class="text-2xl font-extrabold text-slate-950">0</div></div></div>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><div class="text-xs text-slate-500 font-bold uppercase">Berita</div><div id="admin-news-count" class="text-2xl font-extrabold text-slate-950">0</div></div>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><div class="text-xs text-slate-500 font-bold uppercase">Galeri</div><div id="admin-gallery-count" class="text-2xl font-extrabold text-slate-950">0</div></div>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><div class="text-xs text-slate-500 font-bold uppercase">Guru</div><div id="admin-teacher-count" class="text-2xl font-extrabold text-slate-950">0</div></div>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><div class="text-xs text-slate-500 font-bold uppercase">Prestasi</div><div id="admin-ach-count" class="text-2xl font-extrabold text-slate-950">0</div></div>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><div class="text-xs text-slate-500 font-bold uppercase">PPDB</div><div id="admin-ppdb-count" class="text-2xl font-extrabold text-slate-950">0</div></div>
+                    </div>
+
                     <!-- Control Tabs -->
                     <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-4 mb-6">
                         <button onclick="switchAdminTab('berita')" id="tab-btn-berita" class="admin-tab-btn active px-4 py-2 text-sm font-bold rounded-xl bg-emerald-600 text-white">Kelola Berita</button>
                         <button onclick="switchAdminTab('galeri')" id="tab-btn-galeri" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200">Kelola Galeri</button>
                         <button onclick="switchAdminTab('guru')" id="tab-btn-guru" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200">Kelola Guru</button>
                         <button onclick="switchAdminTab('prestasi')" id="tab-btn-prestasi" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200">Kelola Prestasi</button>
+                        <button onclick="switchAdminTab('ppdb')" id="tab-btn-ppdb" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200">Data PPDB</button>
                         <button onclick="switchAdminTab('premium')" id="tab-btn-premium" class="admin-tab-btn px-4 py-2 text-sm font-bold rounded-xl bg-amber-100 text-amber-800 hover:bg-amber-200 flex items-center gap-1.5">
                             <i class="fa-solid fa-crown text-amber-500"></i> Fitur Premium & Setting
                         </button>
@@ -793,8 +977,27 @@
                             <div class="divide-y divide-slate-100 bg-white p-4 rounded-xl shadow-sm border border-slate-200" id="admin-achievements-list"></div>
                         </div>
 
+
+                        <!-- Panel PPDB -->
+                        <div id="panel-ppdb" class="admin-panel hidden">
+                            <h4 class="font-bold text-slate-900 mb-4">Data Pendaftaran Awal PPDB</h4>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-4 flex flex-wrap gap-2 justify-between items-center">
+                                <p class="text-sm text-slate-500">Data tersimpan di browser perangkat ini. Untuk versi database online, hubungkan Firebase/Supabase.</p>
+                                <button onclick="exportPPDBCSV()" class="px-4 py-2 rounded-xl bg-emerald-600 text-white text-sm font-bold"><i class="fa-solid fa-file-csv mr-1"></i> Export CSV</button>
+                            </div>
+                            <div class="divide-y divide-slate-100 bg-white p-4 rounded-xl shadow-sm border border-slate-200" id="admin-ppdb-list"></div>
+                        </div>
+
                         <!-- Panel PREMIUM SETTING -->
                         <div id="panel-premium" class="admin-panel hidden space-y-6">
+
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-extrabold text-slate-900 text-base mb-4 flex items-center gap-2"><i class="fa-solid fa-upload text-sky-600"></i> Upload Foto Cepat</h4>
+                                <p class="text-xs text-slate-500 mb-3">Pilih gambar, lalu salin hasil Data URL ke kolom URL foto berita/galeri/guru/logo.</p>
+                                <input type="file" accept="image/*" onchange="convertImageToDataURL(event)" class="block w-full text-sm text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:bg-emerald-50 file:text-emerald-700 file:font-bold">
+                                <textarea id="image-data-url-output" rows="3" placeholder="Hasil URL gambar akan muncul di sini..." class="mt-3 w-full px-3 py-2 rounded-xl border border-slate-200 text-xs bg-slate-50"></textarea>
+                            </div>
+
                             
                             <!-- 1. Identitas, Logo & Kepala Sekolah -->
                             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
@@ -950,8 +1153,8 @@
 
                             <!-- 5. Backup & Restore (Cadangkan & Pulihkan) -->
                             <div class="bg-amber-50 p-5 rounded-2xl border border-amber-200/60 shadow-sm">
-                                <h4 class="font-extrabold text-amber-950 text-base mb-2 flex items-center gap-2"><i class="fa-solid fa-database"></i> Backup & Restore Database Instansi</h4>
-                                <p class="text-amber-900 text-xs mb-4">Cadangkan semua data guru, artikel berita, prestasi, galeri kegiatan, serta identitas portal ini menjadi file cadangan resmi yang aman.</p>
+                                <h4 class="font-extrabold text-amber-950 text-base mb-2 flex items-center gap-2"><i class="fa-solid fa-database"></i> Backup & Restore Database Firebase</h4>
+                                <p class="text-amber-900 text-xs mb-4">Cadangkan semua data Firebase: guru, artikel berita, prestasi, galeri, PPDB, serta identitas portal menjadi file JSON aman.</p>
                                 <div class="flex flex-col sm:flex-row gap-3">
                                     <button onclick="exportDatabase()" class="px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
                                         <i class="fa-solid fa-download"></i> Ekspor / Unduh Cadangan JSON
@@ -984,6 +1187,8 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <script>
+        // Firebase project sebelumnya: website-sd-villa
+        // Semua data website disimpan di koleksi: website_sekolah/main_content
         const firebaseConfig = {
             apiKey: "AIzaSyBNzC50PgLV2jYehk9TA9wxmDLAin2QiQQ",
             authDomain: "website-sd-villa.firebaseapp.com",
@@ -996,7 +1201,8 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
         const SITE_DOC_REF = db.collection("website_sekolah").doc("main_content");
-        console.log("🔥 Firebase Connected Successfully");
+        window.firebaseOnlineReady = true;
+        console.log("🔥 Firebase Connected Successfully: website_sekolah/main_content");
     </script>
 
     <!-- JAVASCRIPT LOGIC ENGINE -->
@@ -1071,6 +1277,7 @@
             localStorage.setItem('sdn_teachers', JSON.stringify(teachers));
             localStorage.setItem('sdn_achievements', JSON.stringify(achievements));
             localStorage.setItem('sdn_premium_settings', JSON.stringify(premiumSettings));
+            localStorage.setItem('ppdbApplicants', JSON.stringify(ppdbApplicants));
 
             renderAll();
 
@@ -1082,6 +1289,7 @@
                     teachers,
                     achievements,
                     premiumSettings,
+                    ppdbApplicants,
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
                 console.log("✅ Data website tersimpan ke Firebase");
@@ -1102,6 +1310,7 @@
                     teachers = data.teachers || teachers;
                     achievements = data.achievements || achievements;
                     premiumSettings = data.premiumSettings || premiumSettings;
+                    ppdbApplicants = data.ppdbApplicants || ppdbApplicants;
 
                     // Simpan juga ke localStorage sebagai cadangan offline
                     localStorage.setItem('sdn_news', JSON.stringify(news));
@@ -1109,6 +1318,7 @@
                     localStorage.setItem('sdn_teachers', JSON.stringify(teachers));
                     localStorage.setItem('sdn_achievements', JSON.stringify(achievements));
                     localStorage.setItem('sdn_premium_settings', JSON.stringify(premiumSettings));
+                    localStorage.setItem('ppdbApplicants', JSON.stringify(ppdbApplicants));
 
                     console.log("✅ Data website berhasil dimuat dari Firebase");
                 } else {
@@ -1200,8 +1410,28 @@
             document.getElementById('news-modal').classList.add('hidden');
         }
 
+
+
+        // HERO SLIDER: otomatis memakai 3 foto terbaru dari Berita
+        function syncHeroSlidesFromNews() {
+            const heroImages = document.querySelectorAll('#hero-slider .slide img');
+            const heroNews = (news && news.length ? news : initialNews).slice(0, 3);
+            heroImages.forEach((img, index) => {
+                const item = heroNews[index] || heroNews[0];
+                if (!item) return;
+                img.src = item.img;
+                img.alt = item.title || 'Berita SDN Sidomulyo II';
+                img.classList.remove('object-contain', 'p-2', 'bg-slate-100');
+                img.classList.add('object-cover');
+                img.onerror = function() {
+                    this.src = 'https://placehold.co/1920x1080/059669/ffffff?text=SDN+SIDOMULYO+II';
+                };
+            });
+        }
+
         // --- RENDERING DYNAMIC ELEMENTS ---
         function renderAll() {
+            syncHeroSlidesFromNews();
             renderPremiumStructure();
             renderTeachers();
             renderGallery('semua');
@@ -1326,8 +1556,8 @@
             }
 
             container.innerHTML = filtered.map(g => `
-                <div class="group relative rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-white h-72">
-                    <img src="${g.img}" alt="${g.title}" class="w-full h-full object-contain bg-slate-100 p-2 group-hover:scale-105 transition-all duration-300" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=${g.title}'">
+                <div class="group relative rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-900 h-72">
+                    <img src="${g.img}" alt="${g.title}" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=${g.title}'">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/45 to-transparent flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-wider">${g.category}</span>
                         <h4 class="text-base font-bold text-white mt-1">${g.title}</h4>
@@ -1349,10 +1579,10 @@
         function renderNews() {
             const container = document.getElementById('news-grid');
             container.innerHTML = news.map(n => `
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition-all flex flex-col justify-between h-[450px]">
+                <div class="news-card-fixed bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition-all flex flex-col">
                     <div>
-                        <div class="h-48 overflow-hidden">
-                            <img src="${n.img}" alt="${n.title}" class="w-full h-full object-contain bg-slate-100 p-2 hover:scale-102 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/059669/ffffff?text=${n.title}'">
+                        <div class="h-56 overflow-hidden bg-slate-900">
+                            <img src="${n.img}" alt="${n.title}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/059669/ffffff?text=${n.title}'">
                         </div>
                         <div class="p-6">
                             <span class="text-xs font-bold text-emerald-600 flex items-center gap-1.5"><i class="fa-solid fa-calendar"></i> ${n.date}</span>
@@ -1360,7 +1590,7 @@
                             <p class="text-slate-500 text-sm line-clamp-3 leading-relaxed">${n.content}</p>
                         </div>
                     </div>
-                    <div class="px-6 pb-6 pt-2">
+                    <div class="news-readmore-wrap px-6 pt-2">
                         <button onclick="openNewsModal(${n.id})" class="text-sm font-extrabold text-emerald-600 hover:text-emerald-700 flex items-center gap-2 group">
                             Baca Selengkapnya <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </button>
@@ -1563,7 +1793,8 @@
                 gallery: gallery,
                 teachers: teachers,
                 achievements: achievements,
-                premiumSettings: premiumSettings
+                premiumSettings: premiumSettings,
+                ppdbApplicants: ppdbApplicants
             };
 
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData));
@@ -1734,10 +1965,181 @@
             showAlert("Prestasi dihapus.");
         }
 
+
+        // ===== SUPER PREMIUM EXTENSIONS =====
+        let ppdbApplicants = JSON.parse(localStorage.getItem('ppdbApplicants') || '[]');
+        let realtimeVisitorTotal = parseInt(localStorage.getItem('sdn_sidomulyo_visitor_count') || '0', 10);
+        let realtimeOnlineTotal = 0;
+        let visitorPresenceStarted = false;
+
+        function initPremiumUI(){
+            setTimeout(() => document.getElementById('premium-preloader')?.classList.add('hide'), 650);
+            applySavedTheme();
+            document.querySelectorAll('.reveal-up').forEach((el, idx) => setTimeout(()=>el.classList.add('show'), 120*idx));
+            initRealtimeVisitors();
+            refreshPremiumDashboard();
+        }
+
+        function setTextSafe(id, val){ const el = document.getElementById(id); if(el) el.textContent = val; }
+
+        function refreshPremiumDashboard(){
+            const visits = realtimeVisitorTotal || localStorage.getItem('sdn_sidomulyo_visitor_count') || '0';
+            setTextSafe('admin-visitor-count', visits);
+            setTextSafe('admin-online-count', realtimeOnlineTotal);
+            setTextSafe('public-online-count', realtimeOnlineTotal);
+            setTextSafe('admin-news-count', Array.isArray(news) ? news.length : 0);
+            setTextSafe('admin-gallery-count', Array.isArray(gallery) ? gallery.length : 0);
+            setTextSafe('admin-teacher-count', Array.isArray(teachers) ? teachers.length : 0);
+            setTextSafe('admin-ach-count', Array.isArray(achievements) ? achievements.length : 0);
+            setTextSafe('admin-ppdb-count', ppdbApplicants.length);
+            renderPPDBAdminList();
+        }
+
+        function updateThemeButtons(){
+            const isDark = document.body.classList.contains('dark-premium');
+            const icon = document.getElementById('dark-mode-icon');
+            const iconMobile = document.getElementById('dark-mode-icon-mobile');
+            const btn = document.getElementById('dark-mode-toggle');
+            const btnMobile = document.getElementById('dark-mode-toggle-mobile');
+            const iconFloating = document.getElementById('dark-mode-icon-floating');
+            if(icon) icon.className = isDark ? 'fa-solid fa-sun text-sm' : 'fa-solid fa-moon text-sm';
+            if(iconMobile) iconMobile.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            if(btn) btn.classList.toggle('theme-toggle-active', isDark);
+            if(btnMobile) btnMobile.classList.toggle('theme-toggle-active', isDark);
+            if(btnMobile) btnMobile.lastChild.textContent = isDark ? ' Light Mode' : ' Dark Mode';
+        }
+
+        function applySavedTheme(){
+            const saved = localStorage.getItem('darkPremiumMode');
+            const preferDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.body.classList.toggle('dark-premium', saved === '1' || (saved === null && preferDark));
+            updateThemeButtons();
+        }
+
+        function toggleDarkPremium(){
+            document.body.classList.toggle('dark-premium');
+            localStorage.setItem('darkPremiumMode', document.body.classList.contains('dark-premium') ? '1' : '0');
+            updateThemeButtons();
+        }
+
+        async function initRealtimeVisitors(){
+            if(visitorPresenceStarted) return;
+            visitorPresenceStarted = true;
+            const localKey = 'sdn_sidomulyo_visitor_count';
+            try {
+                if(!window.firebaseOnlineReady || !db) throw new Error('Firebase belum aktif');
+                const sessionKey = 'sdn_sidomulyo_session_id';
+                let sessionId = sessionStorage.getItem(sessionKey);
+                const isNewSession = !sessionId;
+                if(!sessionId){
+                    sessionId = 'v_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+                    sessionStorage.setItem(sessionKey, sessionId);
+                }
+                const statsRef = db.collection('website_sekolah').doc('visitor_stats');
+                const presenceRef = statsRef.collection('online').doc(sessionId);
+                if(isNewSession){
+                    await statsRef.set({ totalVisits: firebase.firestore.FieldValue.increment(1), updatedAt: firebase.firestore.FieldValue.serverTimestamp() }, { merge:true });
+                }
+                const heartbeat = () => presenceRef.set({ lastSeen: Date.now(), page: location.pathname || 'index', updatedAt: firebase.firestore.FieldValue.serverTimestamp() }, { merge:true });
+                heartbeat();
+                setInterval(heartbeat, 25000);
+                window.addEventListener('beforeunload', () => presenceRef.set({ lastSeen: 0, offlineAt: Date.now() }, { merge:true }));
+
+                statsRef.onSnapshot(doc => {
+                    const data = doc.exists ? doc.data() : {};
+                    realtimeVisitorTotal = data.totalVisits || parseInt(localStorage.getItem(localKey) || '0', 10) || 0;
+                    localStorage.setItem(localKey, realtimeVisitorTotal);
+                    refreshPremiumDashboard();
+                });
+                db.collection('website_sekolah').doc('visitor_stats').collection('online')
+                  .where('lastSeen', '>', Date.now() - 65000)
+                  .onSnapshot(snapshot => {
+                      realtimeOnlineTotal = snapshot.size || 0;
+                      refreshPremiumDashboard();
+                  });
+            } catch(err){
+                console.warn('Realtime visitor fallback:', err);
+                let visits = parseInt(localStorage.getItem(localKey) || '0', 10) + 1;
+                localStorage.setItem(localKey, visits);
+                realtimeVisitorTotal = visits;
+                realtimeOnlineTotal = 1;
+                refreshPremiumDashboard();
+            }
+        }
+
+        function handlePPDBSubmit(e){
+            e.preventDefault();
+            const applicant = {
+                id: Date.now(),
+                tanggal: new Date().toLocaleString('id-ID'),
+                nama: document.getElementById('ppdb-nama').value,
+                ortu: document.getElementById('ppdb-ortu').value,
+                wa: document.getElementById('ppdb-wa').value,
+                kelas: document.getElementById('ppdb-kelas').value,
+                alamat: document.getElementById('ppdb-alamat').value
+            };
+            ppdbApplicants.unshift(applicant);
+            saveState();
+            e.target.reset();
+            showAlert('Pendaftaran awal berhasil dikirim dan tersimpan ke Firebase. Admin akan menghubungi wali murid.');
+            refreshPremiumDashboard();
+        }
+
+        function renderPPDBAdminList(){
+            const list = document.getElementById('admin-ppdb-list');
+            if(!list) return;
+            if(ppdbApplicants.length === 0){ list.innerHTML = '<p class="text-sm text-slate-500 p-3">Belum ada data pendaftar.</p>'; return; }
+            list.innerHTML = ppdbApplicants.map(p => `
+                <div class="py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div>
+                        <div class="font-extrabold text-slate-900">${p.nama} <span class="text-xs font-bold text-emerald-600">${p.kelas}</span></div>
+                        <div class="text-xs text-slate-500">Wali: ${p.ortu} • WA: ${p.wa} • ${p.tanggal}</div>
+                        <div class="text-xs text-slate-400 mt-1">${p.alamat}</div>
+                    </div>
+                    <button onclick="deletePPDB(${p.id})" class="px-3 py-1.5 rounded-lg bg-red-50 text-red-600 text-xs font-bold">Hapus</button>
+                </div>`).join('');
+        }
+
+        function deletePPDB(id){
+            ppdbApplicants = ppdbApplicants.filter(p => p.id !== id);
+            saveState();
+            showAlert('Data PPDB dihapus dari database.');
+            refreshPremiumDashboard();
+        }
+
+        function exportPPDBCSV(){
+            const rows = [['Tanggal','Nama Siswa','Orang Tua','WhatsApp','Kelas','Alamat'], ...ppdbApplicants.map(p => [p.tanggal,p.nama,p.ortu,p.wa,p.kelas,p.alamat])];
+            const csv = rows.map(r => r.map(v => '"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n');
+            const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'data-ppdb-sdn-sidomulyo-ii.csv';
+            a.click();
+        }
+
+        function convertImageToDataURL(event){
+            const file = event.target.files?.[0];
+            if(!file) return;
+            const reader = new FileReader();
+            reader.onload = () => {
+                const out = document.getElementById('image-data-url-output');
+                if(out){ out.value = reader.result; out.select(); }
+                showAlert('Gambar berhasil diubah menjadi URL. Salin hasilnya ke kolom foto.');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        const originalSaveStatePremium = saveState;
+        saveState = function(){
+            originalSaveStatePremium();
+            setTimeout(refreshPremiumDashboard, 50);
+        }
+
         // ON STARTUP LOAD ALL CONTENT
         window.onload = function() {
             renderAll();
             loadStateFromFirebase();
+            initPremiumUI();
         }
     </script>
 
